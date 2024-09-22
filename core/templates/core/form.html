@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+<div class="mt-5">
+
+    <h2>Formulário</h2>
+    <form method="post">
+         {% csrf_token %}
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Nome:</label>
+            {{ form.nome}}
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Email</label>
+            {{ form.email}}
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Data de Nascimento</label>
+            {{ form.data_nascimento }}
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Matricula</label>
+            {{ form.matricula }}
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Curso</label>
+            {{ form.curso }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+</div>      
+{% endblock %}
